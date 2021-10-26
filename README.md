@@ -82,40 +82,41 @@ Assets:
 npm install
 ```
 
-3. Copy the .env.copy file to .env
+3. Update the URL in /src/components/LiveCast.js to the URL for the Live Serverless functions in Step 1 above:
+
+```javascript
+  render() {
+    return (
+      <div style={{minHeight: '100vh'}}>
+
+        <iframe src='https://live-serverless-XXXX-dev.twil.io/streamer.html'
+
+         allow='camera; microphone'
+         height='100%' width='100%' />
+      </div>
+    );
+  }
 
 ```
-cp .env.copy .env
+
+NOTE: Make sure you only replace the XXXX with your Functions value.
+
+4. Test the plugin locally
+
+```
+twilio flex:plugins:start
+
 ```
 
-4. Update the .env file with Account SID and an API Key/Secret pair.
-   See "API Keys" section of this article for details: https://www.twilio.com/blog/better-twilio-authentication-csharp-twilio-api-keys
+5. Once started, allow camera and microphone access on your browser if asked.
 
-5. Deploy the service to Twilio Functions
+6. Supply a your name and a stream name.
 
-````
-twilio serverless:deploy
+7. Click the Start Stream. You should see "Live" appear on the window, indicating the stream is now live.
 
+8. Open a new browser window and go to https://live-serverless-XXXX-dev.twil.io/audience.html (replacing XXXX with your previously deployed function value)
 
+9. Click "watch Stream". This should now show you the stream (Slightly delayed)
 
-
-
-
-
-
-
-Next, please install the [Twilio CLI](https://www.twilio.com/docs/twilio-cli/quickstart) by running:
-
-```bash
-brew tap twilio/brew && brew install twilio
-````
-
-Finally, install the [Flex Plugin extension](https://github.com/twilio-labs/plugin-flex/tree/v1-beta) for the Twilio CLI:
-
-```bash
-twilio plugins:install @twilio-labs/plugin-flex@beta
-```
-
-## Development
-
-Run `twilio flex:plugins --help` to see all the commands we currently support. For further details on Flex Plugins refer to our documentation on the [Twilio Docs](https://www.twilio.com/docs/flex/developer/plugins/cli) page.
+10. At this point you can WhatsApp, SMS, WebChat and even call into the main Flex number, handling these channels as you would normally, interacting with
+    the audience all while you are broadcasting a Live stream.
