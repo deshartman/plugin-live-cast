@@ -5,6 +5,7 @@ import { FlexPlugin } from 'flex-plugin';
 import LiveCastContainer from './components/LiveCast/LiveCast.Container';
 import reducers, { namespace } from './states';
 import IncomingVideoComponent from './IncomingVideoComponent';
+import DummyCRM from './components/DummyCRM';
 
 const PLUGIN_NAME = 'LiveCastPlugin';
 
@@ -27,7 +28,11 @@ export default class LiveCastPlugin extends FlexPlugin {
     // const options = { sortOrder: -1 };
     // flex.AgentDesktopView.Panel2.Content.replace(<LiveCastContainer key="LiveCastPlugin-component" />, options);
 
-    flex.CRMContainer.defaultProps.uri = `https://live-serverless-3666-dev.twil.io/streamer.html`
+    const options = { sortOrder: -1 };
+    flex.AgentDesktopView.Panel2.Content.replace(<DummyCRM key="dummy-crm" />, options);
+
+    //flex.AgentDesktopView.defaultProps.splitterOptions = { initialFirstPanelSize: "400px", minimumFirstPanelSize: "400px" }
+
   }
 
   /**
