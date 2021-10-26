@@ -1,11 +1,11 @@
 # Twilio Livecast Plugin
 
-The Twilio Livecast Flex plugin allows a pod or video caster to have a single pane of glass for all communication components of their cast in one environment. The vide casting is
-built right into Flex as a pane, so you can start or stop casting as needed.
+The Twilio Livecast Flex plugin allows a pod or video caster to have a single pane of glass for all communication components of their cast in one environment. The video casting is
+built right into Flex as a panel, so you can start or stop casting as needed.
 
 Viewer can then interact with you in their preferred way by sending SMS and WhatsApp messages to your Flex number or even call in to chat to you.
 
-You have all the power of Flex to queue tasks, swap between different tasks and can even have support staff initially answe rand vet calls or messages. Gone are
+You have all the power of Flex to queue tasks, swap between different tasks and can even have support staff initially answer and vet calls or messages. Gone are
 the days of having complex PBX or EKTS systems for your station. Now you have a full powered, flexible communications environment (Flex) right in your browser alongside a powerful,
 low latency broadcasting video service (Live).
 
@@ -13,10 +13,10 @@ low latency broadcasting video service (Live).
 
 There are two components to the setup:
 
-_Part 1. Twilio Live Service
-Part 2. Flex plugin_
+Part 1. Twilio Live Serverless
+Part 2. Flex plugin
 
-### Part 1 - Twilio Live Service
+### Part 1 - Twilio Live Serverless
 
 1. Clone the repo located here: https://github.com/deshartman/live-serverless
 
